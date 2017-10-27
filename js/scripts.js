@@ -33,7 +33,7 @@ $(function(){
     var count = counter(userInput);
     var toBeepBoop = translate(count)
 
-     alert(beepBoopNumber);
+    $("#result p").text(beepBoopNumber);
   });
 
 });
