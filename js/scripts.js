@@ -1,9 +1,7 @@
 var beepBoopNumber = [];
 var translate = function(count) {
-  // debugger;
   beepBoopNumber = [];
   for (var i = 0; i < count.length; i++) {
-    // debugger;
     if (count[i] === "0") {
       beepBoopNumber += "Beep";
     } else if (count[i] === "1") {
@@ -16,9 +14,13 @@ var translate = function(count) {
   };
 };
 var counter = function(num){
-    if(num === 1) return '1';
-    return counter(num - 1) + ', ' + num;
-}
+    if(num === 1) {
+      return '1';
+    } else {
+      return counter(num - 1) + ', ' + num;
+    }
+};
+
 
 
 
