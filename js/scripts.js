@@ -1,3 +1,12 @@
+//business logic
+
+var counter = function(num){
+  if(num === 1) {
+    return '1';
+  } else {
+    return counter(num - 1) + ', ' + num;
+  }
+};
 var beepBoopNumber = [];
 var translate = function(count) {
   beepBoopNumber = [];
@@ -14,17 +23,8 @@ var translate = function(count) {
     }
   };
 };
-var counter = function(num){
-    if(num === 1) {
-      return '1';
-    } else {
-      return counter(num - 1) + ', ' + num;
-    }
-};
 
-
-
-
+// user interface logic
 
 $(function(){
   $("#beep-boop-form").submit(function(event){
@@ -32,8 +32,6 @@ $(function(){
     var userInput = parseInt($("#number-input").val());
     var count = counter(userInput);
     var toBeepBoop = translate(count)
-
     $("#result p").text(beepBoopNumber);
   });
-
 });
