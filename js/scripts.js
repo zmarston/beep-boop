@@ -2,11 +2,12 @@ var beepBoopNumber = [];
 var translate = function(count) {
   beepBoopNumber = [];
   for (var i = 0; i < count.length; i++) {
+    // debugger;
     if (count[i] === "0") {
       beepBoopNumber += "Beep";
     } else if (count[i] === "1") {
       beepBoopNumber += "Boop";
-    } else if (count[i] === "3") {
+    } else if ((parseInt(count[i]) % 3) === 0) {
       beepBoopNumber += "I'm sorry, Dave. I'm afraid I can't do that.";
     } else {
       beepBoopNumber += count[i];

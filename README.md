@@ -1,0 +1,34 @@
+# Beep Boop
+
+#### A website dedicated to counting to the users number and changing some of the character to a different string, 10.27.2017
+
+#### By **Zachary Marston**
+
+## Specifications
+* It can count up to the provided number.
+** Example Input: 2
+** Example Output: [1, 2]
+* It replaces any 0 in the count to a Beep.
+** Example Input: 10
+** Example Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 1Beep]
+* It replaces any 1 in the count to a Beep.
+** Example Input: 3
+** Example Output: [Boop, 2, 3]
+* It can count up to the provided number.
+** Example Input: 2
+** Example Output: [1, 2]
+
+## Description
+
+
+## Setup
+* Clone this repository by running this command in your terminal: git clone https://github.com/zmarston/beep-boop
+
+## Technologies Used
+* HTML
+* CSS
+* JavaScript
+
+## Legal
+Copyright (c) 2017 Zachary Marston.
+This software is licensed under the MIT license.
