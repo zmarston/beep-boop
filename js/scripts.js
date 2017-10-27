@@ -1,32 +1,24 @@
 var beepBoopNumber = [];
-var translate = function(input) {
+var translate = function(count) {
+  // debugger;
   beepBoopNumber = [];
-  for (var i = 0; i < input.length; i++) {
+  for (var i = 0; i < count.length; i++) {
     // debugger;
-    if (input[i] === "0") {
+    if (count[i] === "0") {
       beepBoopNumber += "Beep";
-    } else if (input[i] === "1") {
+    } else if (count[i] === "1") {
       beepBoopNumber += "Boop";
-    } else if (input[i] === "3") {
+    } else if (count[i] === "3") {
       beepBoopNumber += "I'm sorry, Dave. I'm afraid I can't do that.";
     } else {
-      beepBoopNumber += input[i];
+      beepBoopNumber += count[i];
     }
   };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
+var counter = function(num){
+    if(num === 1) return '1';
+    return counter(num - 1) + ', ' + num;
+}
 
 
 
@@ -34,8 +26,9 @@ var translate = function(input) {
 $(function(){
   $("#beep-boop-form").submit(function(event){
     event.preventDefault();
-    var userInput = $("#number-input").val().split("");
-    var beepBoop = translate(userInput);
+    var userInput = parseInt($("#number-input").val());
+    var count = counter(userInput);
+    var toBeepBoop = translate(count)
 
      alert(beepBoopNumber);
   });
