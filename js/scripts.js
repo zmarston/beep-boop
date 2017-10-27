@@ -11,7 +11,6 @@ var beepBoopNumber = [];
 var translate = function(count) {
   beepBoopNumber = [];
   for (var i = 0; i < count.length; i++) {
-    // debugger;
     if (count[i] === "0") {
       beepBoopNumber += "Beep";
     } else if (count[i] === "1") {
@@ -26,6 +25,7 @@ var translate = function(count) {
 
 // user interface logic
 
+var name = $("#name-input").val();
 $(function(){
   $("#beep-boop-form").submit(function(event){
     event.preventDefault();
@@ -33,5 +33,6 @@ $(function(){
     var count = counter(userInput);
     var toBeepBoop = translate(count)
     $("#result p").text(beepBoopNumber);
+    $("#reverse").show();
   });
 });

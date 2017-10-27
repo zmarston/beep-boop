@@ -18,3 +18,6 @@ h1 {
   display: block;
   align-content: center;
 }
+#reverse {
+  display: none;
+}
