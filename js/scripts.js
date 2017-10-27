@@ -1,5 +1,6 @@
 var beepBoopNumber = [];
 var translate = function(input) {
+  beepBoopNumber = [];
   for (var i = 0; i < input.length; i++) {
     // debugger;
     if (input[i] === "0") {
